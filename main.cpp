@@ -35,7 +35,7 @@ int main()
             }
         }
     } else if (gender == 'female') {
-        if (age >= 20 && age <= 35) {
+        if (age >= 20 && age <= 22) {
             if (laugh && Height && money) {
                 cout << " hes the one for you" << endl;
             } else {
