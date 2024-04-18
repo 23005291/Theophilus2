@@ -1,51 +1,61 @@
 #include <iostream>
+#include <string>
 
 using namespace std;
 
 int main()
 {
-    int age, Contender_Age,laugh, Height, money;
+    int age, contenderAge;
     char gender;
+    string laugh1, laugh2, height1, height2, money1, money2;
 
-    cout<< "Enter your gender (male or female) : "<<endl;
-    cin>> gender;
+    cout << "Enter your gender (m for male or f for female): ";
+    cin >> gender;
 
-    cout << "Enter your age: "<<endl;
+    cout << "Enter your age: ";
     cin >> age;
 
-    cout << "Enter your potential partners age: "<<endl;
-    cin >>  Contender_Age;
+    cout << "Enter your potential partner's age: ";
+    cin >> contenderAge;
 
-    cout << "Do want a person who makes you laugh? (1 for yes or 0 for no)"<<endl;
-    cin >>  laugh;
+    cout << "Do you want a person who makes you laugh? (yes or no): ";
+    cin >> laugh1;
+    cout << "Does the person make you laugh? (yes or no): ";
+    cin >> laugh2;
 
-    cout << "Do you want a tall or short person?( 1 for tall or 0 for short) "<<endl;
-    cin >>  Height;
+    cout << "Do you want a tall or short person? (tall or short): ";
+    cin >> height1;
+    cout << "Is the person tall or short? (tall or short): ";
+    cin >> height2;
 
-    cout << "Should they be having money? (1 for yes or 0 for no)"<<endl;
-    cin >>  money;
+    cout << "Should they have money? (yes or no): ";
+    cin >> money1;
+    cout << "Do they have money? (yes or no): ";
+    cin >> money2;
 
-
- if (gender == 'male') {
+    if (gender == 'm') {
         if (age >= 16 && age <= 25) {
-            if (laugh&& Height && money) {
-                cout << "shes the one for you " << endl;
+            if (laugh1 == "yes" && laugh2 == "yes" && height1 == height2 && money1 == money2) {
+                cout << "She's the one for you." << endl;
             } else {
-                cout << "Sorry, shes not the one " << endl;
+                cout << "Sorry, she's not the one." << endl;
             }
+        } else {
+            cout << "Sorry, the age range for male contenders is 16-25." << endl;
         }
-    } else if (gender == 'female') {
-        if (age >= 20 && age <= 22) {
-            if (laugh && Height && money) {
-                cout << " hes the one for you" << endl;
+    } else if (gender == 'f') {
+        if (age >= 16 && age <= 22) {
+            if (laugh1 == "yes" && laugh2 == "yes" && height1 == height2 && money1 == money2) {
+                cout << "He's the one for you." << endl;
             } else {
-                cout << "Sorry, hes not the one" << endl;
+                cout << "Sorry, he's not the one." << endl;
             }
+        } else {
+            cout << "Sorry, the age range for female contenders is 16-22." << endl;
         }
     } else {
-        cout << "Invalid input! " << endl;
+        cout << "Invalid input! Gender must be 'm' for male or 'f' for female." << endl;
     }
-
 
     return 0;
 }
